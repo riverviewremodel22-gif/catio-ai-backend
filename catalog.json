@@ -38,9 +38,11 @@
       "id": "mesh-14ga-1in",
       "category": "mesh",
       "recommendation": "14-gauge 1x1-inch black PVC-coated welded wire",
-      "amazonAffiliateUrl": null,
+      "amazonAffiliateUrl": "https://amzn.to/3OOkmhC",
       "brand": null,
-      "verified": false
+      "verified": false,
+      "linkApprovedByOwner": true,
+      "linkVerificationStatus": "Owner-supplied affiliate URL; Amazon destination/product specification not yet independently verified"
     },
     {
       "id": "rope-synthetic-manila",
