@@ -1,6 +1,6 @@
 # The Catio Company — AI backend starter
 
-Status: **source package only; not deployed or connected**. This is a starter for a developer-managed Node 20+ backend, not a Wix static HTML file. It uses the OpenAI API from the server, keeping the API key out of browser code.
+Status: **source package only; not deployed or connected**. The development branch adds a source-grounded catio-matching endpoint and tests; it has NOT been deployed. This is a starter for a developer-managed Node 20+ backend, not a Wix static HTML file. It uses the OpenAI API from the server, keeping the API key out of browser code.
 
 ## Configuration
 
@@ -23,3 +23,12 @@ Run `npm start` with Node 20 or later. `GET /health` returns only readiness; `PO
 6. Configure Wix Bookings and payment confirmation separately. Do not claim appointments are available until true slots have been checked.
 7. Audit the calculation model and the $150 consultation credit policy before activating customer-facing payments.
 8. When enabling a production model, test factual responses, unsafe prompt injection, fee rules, links, and the no-final-quote constraint.
+
+
+## Draft project matching feature (development branch only)
+
+`POST /api/projects/match` with `{"query":"patio catio with barn doors","limit":3}` or `{"projectId":"<a known catalog cmsId>","limit":3}` ranks comparable published-original project references from 24 project entries in `catalog.json`. Returns only catalog-backed links, names, short descriptions, and similarity reasons. It does not return prices, warranties, site-specific advice or fabricated specifications.
+
+For security, the same `ALLOWED_ORIGIN` and basic rate limit apply. It is read-only; no client address, photos, or chat data are stored. Treat the matcher as a candidate shortlist, not a definitive design recommendation. Wix CMS live synchronization, customer lead storage and appointment/payment integrations remain NOT CONNECTED.
+
+To run tests locally: `npm test`. Do not claim tests have passed until run by a trusted CI runner or developer.
