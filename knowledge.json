@@ -1,0 +1,18 @@
+{
+  "business": "The Catio Company",
+  "primaryArea": "Portland, Oregon and Vancouver, Washington metro areas",
+  "outOfAreaPolicy": "Only consider Signature Projects with budgets starting at $35,000; travel and project acceptance require staff approval. Never promise availability.",
+  "startingPricesUSD": {"freestanding": 8000, "window": 4000, "patioConversion": 16000, "signature": 35000},
+  "freestandingPerSqFtUSD": [140, 155],
+  "consultationUSD": 150,
+  "consultationPolicy": "Fee credited toward the construction project if the customer proceeds, subject to written terms.",
+  "materials": {
+    "mesh": "Heavy-duty 14-gauge 1-by-1-inch black PVC-coated welded wire",
+    "wood": "Cedar",
+    "roof": "Shade-tinted polycarbonate; metal or asphalt shingles for some designs",
+    "rope": "3/8-inch synthetic manila",
+    "stain": "TimberPro UV stain"
+  },
+  "affiliateLinks": {"mesh": null, "wood": null, "roof": null, "rope": null, "stain": null},
+  "rules": ["Never promise bookings or purchases that have not been verified", "Never fabricate affiliate URLs", "Treat estimates as preliminary", "Do not identify a specific finish solely from a photo", "Never claim files were stored unless a storage service confirmed it"]
+}
