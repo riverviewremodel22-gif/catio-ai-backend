@@ -5,7 +5,7 @@
   "startingPricesUSD": {
     "freestanding": 8000,
     "window": 4000,
-    "patioConversion": 16000,
+    "patioConversion": 12000,
     "signature": 35000
   },
   "freestandingPerSqFtUSD": [
@@ -22,7 +22,7 @@
     "stain": "TimberPro UV stain"
   },
   "affiliateLinks": {
-    "mesh": null,
+    "mesh": "https://amzn.to/3OOkmhC",
     "wood": null,
     "roof": null,
     "rope": null,
@@ -33,7 +33,10 @@
     "Never fabricate affiliate URLs",
     "Treat estimates as preliminary",
     "Do not identify a specific finish solely from a photo",
-    "Never claim files were stored unless a storage service confirmed it"
+    "Never claim files were stored unless a storage service confirmed it",
+    "Never claim a consultation has been paid or booked without independent Wix Bookings/payment confirmation",
+    "Do not save customer personal information or uploaded photographs in a publicly readable portfolio CMS collection",
+    "Treat photo upload, CRM write and order resend as unavailable until their respective secure backend integrations are tested"
   ],
   "projectFinishes": {
     "zooeyPergolaConversion": {
@@ -66,5 +69,56 @@
     "bookingStatus": "Inactive in preview: no live payments, calendar booking, or confirmed openings until availability and address verification integrated.",
     "slotDurationMinutes": 60,
     "betweenSessionsMinutes": 60
+  },
+  "typicalRangesUSD": {
+    "patioConversion": [
+      12000,
+      18000
+    ],
+    "completeCustom": [
+      15000,
+      20000
+    ]
+  },
+  "intakePolicy": {
+    "requiredForPreliminaryEstimate": [
+      "projectType",
+      "widthFeet",
+      "depthFeet",
+      "city",
+      "zipCode",
+      "budgetRange"
+    ],
+    "requestIfRelevant": [
+      "heightFeet",
+      "fullStreetAddress",
+      "hoaApproval",
+      "petAccess",
+      "numberOfCats",
+      "catMobilityNeeds",
+      "roofPreference",
+      "finishPreference"
+    ],
+    "optionalPhotoUploads": [
+      "proposedSite",
+      "windowOrDoorAccess",
+      "groundAndRoof",
+      "roughSketch"
+    ],
+    "photoConsentRequired": true,
+    "photoPrivacy": "Private customer records only, not the public CatioProjects collection.",
+    "projectReference": "Preserve a stable CMS project ID when the visitor requests a similar catio.",
+    "onlyClaimStoredAfterConfirmedWrite": true
+  },
+  "orderSupportPolicy": {
+    "purchaseVerificationRequired": true,
+    "sourceOfTruth": "Original live Wix Stores paid order, not draft copy.",
+    "noResendWithoutEntitlement": true,
+    "fallback": "Direct customers to info@thecatiocompany.com; never expose a buyer's order details to an unverified caller."
+  },
+  "projectCatalogPolicy": {
+    "source": "The Catio Company 2 CatioProjects CMS (24 draft imports)",
+    "liveLookupStatus": "NOT_CONNECTED",
+    "description": "Show only verified fields from an authenticated read-only CMS lookup when implemented. Never claim to have live CMS access while disconnected."
   }
 }
