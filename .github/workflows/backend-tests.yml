@@ -1,0 +1,20 @@
+name: Catio AI backend tests
+on:
+  push:
+    branches:
+      - feature/consultation-intake-and-support-spec
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test backend without production credentials
+        run: npm test
