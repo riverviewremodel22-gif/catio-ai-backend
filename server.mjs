@@ -1,6 +1,7 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { evaluateAddress } from './eligibility.mjs';
+import { findSimilarProjects } from './project-matching.mjs';
 
 const kb = JSON.parse(await readFile(new URL('./knowledge.json', import.meta.url), 'utf8'));
 const catalog = JSON.parse(await readFile(new URL('./catalog.json', import.meta.url), 'utf8'));
@@ -33,7 +34,8 @@ http.createServer(async (req,res)=>{
   }
   const isEligibility=req.url==='/api/consultation/eligibility' && req.method==='POST';
   const isChat=req.url==='/api/chat' && req.method==='POST';
-  if (!isChat && !isEligibility) return json(res,404,{error:'Not found'});
+  const isMatch=req.url==='/api/projects/match' && req.method==='POST';
+  if (!isChat && !isEligibility && !isMatch) return json(res,404,{error:'Not found'});
   if (!origin || req.headers.origin!==origin) return json(res,403,{error:'Origin not allowed'});
   if (ipLimited(req.socket.remoteAddress||'unknown')) return json(res,429,{error:'Too many requests'});
   if(isEligibility){
@@ -46,6 +48,30 @@ http.createServer(async (req,res)=>{
       const result=await evaluateAddress(payload&&typeof payload==='object'?payload:{});
       return json(res,result.eligible?200:422,result);
     }catch{return json(res,400,{eligible:false,canBook:false,canPay:false,error:'Unable to verify address. Please contact our team.'});}
+  }
+  if (isMatch) {
+    try {
+      const maxMatchBody = 2048;
+      let body = '', bytes = 0;
+      for await (const part of req) {
+        bytes += part.length;
+        if (bytes > maxMatchBody) return json(res,413,{error:'Project query too large'});
+        body += part.toString('utf8');
+      }
+      const input = JSON.parse(body);
+      if (!input || Array.isArray(input) || typeof input !== 'object') {
+        return json(res,400,{error:'Expected a project search object'});
+      }
+      if (typeof input.query !== 'undefined' && typeof input.query !== 'string') {
+        return json(res,400,{error:'Query must be text'});
+      }
+      if (typeof input.projectId !== 'undefined' && typeof input.projectId !== 'string') {
+        return json(res,400,{error:'Project ID must be text'});
+      }
+      return json(res,200,findSimilarProjects(catalog,input));
+    } catch {
+      return json(res,400,{error:'Invalid project query'});
+    }
   }
   if (!apiKey) return json(res,503,{error:'AI service not configured'});
   try {
