@@ -52,5 +52,19 @@
     }
   },
   "projectIdentificationPolicy": "If asked to identify the finish on a particular The Catio Company project, first match project names, blog articles, Instagram captions and other verified posts. Prefer explicit published product and shade over visual inference. If not certain which project photo is intended, ask for the post link or project name. Cite the source URL where known. No web browsing is available to this backend until a search/retrieval feature is implemented; do not claim to have searched online in real time.",
-  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs."
+  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs.",
+  "consultationScheduling": {
+    "feeUsd": 150,
+    "timezone": "America/Los_Angeles",
+    "frequency": "Two Saturdays per month only",
+    "northernDay": "First Saturday of each month, 9:00 AM–5:00 PM",
+    "northernZone": "Vancouver, northern Portland, Gresham and nearby approved primary-area locations",
+    "southernDay": "Third Saturday of each month, 9:00 AM–5:00 PM",
+    "southernZone": "Southern, southeastern and southwestern Portland metro and nearby approved primary-area locations",
+    "eligibility": "Only verified addresses inside approved Portland–Vancouver primary service area may see availability or pay. ZIP matching alone is tentative; verify full address before booking or charging.",
+    "outOfArea": "Reject normal consultation booking/payment. Explain only Signature Projects starting at $35,000 may be considered subject to review. Never promise an out-of-area consultation.",
+    "bookingStatus": "Inactive in preview: no live payments, calendar booking, or confirmed openings until availability and address verification integrated.",
+    "slotDurationMinutes": 60,
+    "betweenSessionsMinutes": 60
+  }
 }
