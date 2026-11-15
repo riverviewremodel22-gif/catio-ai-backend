@@ -12,8 +12,8 @@
     140,
     155
   ],
-  "consultationUSD": 150,
-  "consultationPolicy": "Fee credited toward the construction project if the customer proceeds, subject to written terms.",
+  "consultationUSD": 120,
+  "consultationPolicy": "The $120 on-site consultation fee is credited toward the construction project if the customer proceeds, subject to written terms. Booking eligibility is limited to confirmed Portland–Vancouver primary-area addresses.",
   "materials": {
     "mesh": "Heavy-duty 14-gauge 1-by-1-inch black PVC-coated welded wire",
     "wood": "Cedar",
@@ -54,7 +54,7 @@
   "projectIdentificationPolicy": "If asked to identify the finish on a particular The Catio Company project, first match project names, blog articles, Instagram captions and other verified posts. Prefer explicit published product and shade over visual inference. If not certain which project photo is intended, ask for the post link or project name. Cite the source URL where known. No web browsing is available to this backend until a search/retrieval feature is implemented; do not claim to have searched online in real time.",
   "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs.",
   "consultationScheduling": {
-    "feeUsd": 150,
+    "feeUsd": 120,
     "timezone": "America/Los_Angeles",
     "frequency": "Two Saturdays per month only",
     "northernDay": "First Saturday of each month, 9:00 AM–5:00 PM",
