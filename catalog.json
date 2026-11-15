@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "description": "Approved Catio Company product recommendations and verified finish provenance. Null URLs mean do not show purchase links.",
+  "projects": [
+    {
+      "id": "zooey-pergola",
+      "name": "Zooey's pergola-to-catio conversion",
+      "aliases": [
+        "Zooey",
+        "pergola to catio",
+        "Madrone catio"
+      ],
+      "stain": {
+        "brand": "TimberPro UV",
+        "color": "Madrone"
+      },
+      "sourceUrl": "https://www.thecatiocompany.com/post/3-unique-catio-designs-you-have-to-see-for-inspiration",
+      "verified": true
+    },
+    {
+      "id": "five-cats-modular",
+      "name": "Modular catio for five cats",
+      "aliases": [
+        "five adventure ready cats",
+        "modular catio",
+        "Hawaii cats"
+      ],
+      "stain": {
+        "brand": "TimberPro UV",
+        "color": "Mocha"
+      },
+      "sourceUrl": "https://www.thecatiocompany.com/post/3-unique-catio-designs-you-have-to-see-for-inspiration",
+      "verified": true
+    }
+  ],
+  "products": [
+    {
+      "id": "mesh-14ga-1in",
+      "category": "mesh",
+      "recommendation": "14-gauge 1x1-inch black PVC-coated welded wire",
+      "amazonAffiliateUrl": null,
+      "brand": null,
+      "verified": false
+    },
+    {
+      "id": "rope-synthetic-manila",
+      "category": "rope",
+      "recommendation": "3/8-inch synthetic manila rope",
+      "amazonAffiliateUrl": null,
+      "brand": null,
+      "verified": false
+    },
+    {
+      "id": "stain-timberpro-madrone",
+      "category": "stain",
+      "recommendation": "TimberPro UV Madrone",
+      "amazonAffiliateUrl": null,
+      "brand": "TimberPro UV",
+      "verified": false
+    },
+    {
+      "id": "stain-timberpro-mocha",
+      "category": "stain",
+      "recommendation": "TimberPro UV Mocha",
+      "amazonAffiliateUrl": null,
+      "brand": "TimberPro UV",
+      "verified": false
+    }
+  ],
+  "rules": [
+    "Never fabricate Amazon affiliate URLs.",
+    "Only display an affiliate link if its URL field is populated with a verified approved link.",
+    "When identifying a finish, prioritize the project source record rather than photo color similarity.",
+    "If image matches no documented project, request a project link or explain uncertainty.",
+    "Disclose that product links may earn a commission where appropriate."
+  ]
+}
