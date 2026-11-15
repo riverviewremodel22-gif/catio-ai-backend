@@ -1,5 +1,6 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
+import { evaluateAddress } from './eligibility.mjs';
 
 const kb = JSON.parse(await readFile(new URL('./knowledge.json', import.meta.url), 'utf8'));
 const catalog = JSON.parse(await readFile(new URL('./catalog.json', import.meta.url), 'utf8'));
@@ -30,9 +31,22 @@ http.createServer(async (req,res)=>{
       'access-control-max-age':'600', 'vary':'Origin'
     }); return res.end();
   }
-  if (req.url!=='/api/chat' || req.method!=='POST') return json(res,404,{error:'Not found'});
+  const isEligibility=req.url==='/api/consultation/eligibility' && req.method==='POST';
+  const isChat=req.url==='/api/chat' && req.method==='POST';
+  if (!isChat && !isEligibility) return json(res,404,{error:'Not found'});
   if (!origin || req.headers.origin!==origin) return json(res,403,{error:'Origin not allowed'});
   if (ipLimited(req.socket.remoteAddress||'unknown')) return json(res,429,{error:'Too many requests'});
+  if(isEligibility){
+    try{
+      const len=Number(req.headers['content-length']||0);
+      if(len>2500)return json(res,413,{error:'Address request too large'});
+      let body='',bytes=0;
+      for await(const part of req){bytes+=part.length;if(bytes>2500)return json(res,413,{error:'Address request too large'});body+=part.toString('utf8');}
+      const payload=JSON.parse(body);
+      const result=await evaluateAddress(payload&&typeof payload==='object'?payload:{});
+      return json(res,result.eligible?200:422,result);
+    }catch{return json(res,400,{eligible:false,canBook:false,canPay:false,error:'Unable to verify address. Please contact our team.'});}
+  }
   if (!apiKey) return json(res,503,{error:'AI service not configured'});
   try {
     let body='',length=0;
