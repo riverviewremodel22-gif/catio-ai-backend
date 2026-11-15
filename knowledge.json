@@ -2,8 +2,16 @@
   "business": "The Catio Company",
   "primaryArea": "Portland, Oregon and Vancouver, Washington metro areas",
   "outOfAreaPolicy": "Only consider Signature Projects with budgets starting at $35,000; travel and project acceptance require staff approval. Never promise availability.",
-  "startingPricesUSD": {"freestanding": 8000, "window": 4000, "patioConversion": 16000, "signature": 35000},
-  "freestandingPerSqFtUSD": [140, 155],
+  "startingPricesUSD": {
+    "freestanding": 8000,
+    "window": 4000,
+    "patioConversion": 16000,
+    "signature": 35000
+  },
+  "freestandingPerSqFtUSD": [
+    140,
+    155
+  ],
   "consultationUSD": 150,
   "consultationPolicy": "Fee credited toward the construction project if the customer proceeds, subject to written terms.",
   "materials": {
@@ -13,6 +21,36 @@
     "rope": "3/8-inch synthetic manila",
     "stain": "TimberPro UV stain"
   },
-  "affiliateLinks": {"mesh": null, "wood": null, "roof": null, "rope": null, "stain": null},
-  "rules": ["Never promise bookings or purchases that have not been verified", "Never fabricate affiliate URLs", "Treat estimates as preliminary", "Do not identify a specific finish solely from a photo", "Never claim files were stored unless a storage service confirmed it"]
+  "affiliateLinks": {
+    "mesh": null,
+    "wood": null,
+    "roof": null,
+    "rope": null,
+    "stain": null
+  },
+  "rules": [
+    "Never promise bookings or purchases that have not been verified",
+    "Never fabricate affiliate URLs",
+    "Treat estimates as preliminary",
+    "Do not identify a specific finish solely from a photo",
+    "Never claim files were stored unless a storage service confirmed it"
+  ],
+  "projectFinishes": {
+    "zooeyPergolaConversion": {
+      "name": "Zooey's pergola-to-catio conversion",
+      "stainBrand": "TimberPro UV",
+      "stainColor": "Madrone",
+      "sourceUrl": "https://www.thecatiocompany.com/post/3-unique-catio-designs-you-have-to-see-for-inspiration",
+      "verifiedSource": "The Catio Company website article, Feb 9 2025 (updated Oct 13 2025)"
+    },
+    "modularTwoCatioProject": {
+      "name": "Modular Catio for Five Adventure-Ready Cats",
+      "stainBrand": "TimberPro UV",
+      "stainColor": "Mocha",
+      "sourceUrl": "https://www.thecatiocompany.com/post/3-unique-catio-designs-you-have-to-see-for-inspiration",
+      "verifiedSource": "The Catio Company website article, Feb 9 2025 (updated Oct 13 2025)"
+    }
+  },
+  "projectIdentificationPolicy": "If asked to identify the finish on a particular The Catio Company project, first match project names, blog articles, Instagram captions and other verified posts. Prefer explicit published product and shade over visual inference. If not certain which project photo is intended, ask for the post link or project name. Cite the source URL where known. No web browsing is available to this backend until a search/retrieval feature is implemented; do not claim to have searched online in real time.",
+  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs."
 }
