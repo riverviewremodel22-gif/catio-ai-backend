@@ -75,5 +75,273 @@
     "When identifying a finish, prioritize the project source record rather than photo color similarity.",
     "If image matches no documented project, request a project link or explain uncertainty.",
     "Disclose that product links may earn a commission where appropriate."
-  ]
+  ],
+  "cmsProjects": [
+    {
+      "cmsId": "d665dcf6-7f52-47ba-bf93-8e6ed70e64b0",
+      "name": "Rebuilt & Reinforced Screened-In Catio by The Catio Company in Ridgefield, WA ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/rebuilt-%26-reinforced-screened-in-catio-by-the-catio-company-in-ridgefield%2C-wa-",
+      "shortDescription": "This screened-in patio catio in Ridgefield, Washington was a complete demo and rebuild of an older enclosure.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "6e17f254-79b2-4fce-a5bf-d17a865e1bd9",
+      "name": "Backyard patio to Catio with Barn Doors and Elevated Lookout, in Portland, Oregon, built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/patio-for-cats-in-portland-oregon-built-by-the-catio-company",
+      "shortDescription": "This patio-to-catio conversion in Portland, Oregon is one of our most unique and special projects.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "c5aa7d54-ea04-4d24-9f7d-f430c1509960",
+      "name": "Patio to Catio Transformation for Millie and Winston, the Sweetest Orange Sibling Duo, in Tigard, Oregon, built and designed by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/patio-to-catio-transformation-in-tigard-oregon-built-by-the-catio-company",
+      "shortDescription": "This custom catio project in Tigard, Oregon was designed for two playful orange-and-white siblings, and we’ve truly never seen such a bonded pair!",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "9ced5ad3-7a46-4a31-963e-26fbe3bfae2e",
+      "name": "Modern Patio to Catio for Junipurr and Coco, two gorgeous Bengals in Portland, Oregon, Built and Designed by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/modern-patio-to-catio-in-portland-oregon-built-by-the-catio-company",
+      "shortDescription": "This custom catio project in Portland, Oregon was designed for a lovely family and their two beautiful Bengal sisters.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "b10a622f-3f18-497f-810b-ad9825c7347c",
+      "name": "Breezeway to Catio for Lilly and Pheebs in Vancouver, Washington. Custom built and designed by The Catio Company ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/breezeway-to-catio-in-vancouver-washington-built-by-the-catio-company",
+      "shortDescription": "This unique catio design transforms a breezeway into a safe and engaging patio space, perfectly suited for two cats with different needs and temperaments.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "0b8825ca-9345-4bba-a5fa-28105f0a6a1a",
+      "name": "Patio-to-Catio Conversion in Camas, Washington. Built by The Catio Company for a Foster-Friendly Family ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/patio-to-catio-conversion-in-camas-washington-built-by-the-catio-company",
+      "shortDescription": "See this real Patio-to-Catio Conversion in Camas, Washington for a Foster-Friendly Family project, including original photos and custom design details from Th",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "3a87df56-b297-4874-970d-07f97928477a",
+      "name": "Screened-In Porch for Cats in Sellwood, Oregon ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/screened-in-porch-for-cats-in-sellwood-oregon",
+      "shortDescription": "This colorful screened-in porch in Sellwood, Oregon was designed by The Catio Company for two orange brothers, Bud and Una.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "b55c64dc-5be3-40d7-9340-f8b5fac10178",
+      "name": "Screened-In Patio for Cats in Portland, Oregon ",
+      "sourceUrl": "https://www.thecatiocompany.com/items/screened-in-patio-to-catio-in-portland-oregon-built-by-the-catio-company",
+      "shortDescription": "Transforming a patio into a shared space for both humans and cats, is one of our favorite kind of projects.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "f891a764-3485-4b6d-90dc-8e907068e3d6",
+      "name": "Screened-In Patio for Cats in Ridgefield, Washington. Designed & built by The Catio Company for Hazel,  Noel & Kitty.",
+      "sourceUrl": "https://www.thecatiocompany.com/items/screened-in-catio-in-ridgefield-washington-built-by-the-catio-company",
+      "shortDescription": "This screened-in patio for cats in Ridgefield, Washington was designed and built by The Catio Company as a safe outdoor retreat for Hazel, Noel, and Kitty.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "1c3543b2-b875-4c13-925b-a909b42f85e3",
+      "name": "Screened-In Catio in Beaverton, Oregon. Built by The Catio Company for Yzma.",
+      "sourceUrl": "https://www.thecatiocompany.com/items/screened-in-catio-in-beaverton-oregon-built-by-the-catio-company",
+      "shortDescription": "This beautiful screened-in catio for Yzma was designed and built by The Catio Company in Beaverton, Oregon.",
+      "projectType": "Patios",
+      "legacyCollection": "Items",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "d86ed349-6413-4d9a-9175-779f251bb7b3",
+      "name": "8'x13' cedar Catio in Hillsboro, OR.",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/custom-8'x13'-cedar-cation-in-hillsboro%2C-or.",
+      "shortDescription": "This 8×13 custom cedar catio was thoughtfully designed for two cats and built on an existing deck in Hillsboro, Oregon.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "d6d12b42-98ff-46fe-b8ef-4f2a2c5a8ec1",
+      "name": "Large Custom Catio in West Linn, OR",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/large-custom-catio-in-west-linn%2C-or",
+      "shortDescription": "See this real Large Custom Catio in West Linn, OR project, including original photos and custom design details from The Catio Company.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "0fcd78dd-218d-48d1-b890-d86ba3bc7990",
+      "name": "Large 8x12 Custom Catio Designed & Built by The Catio Company in Portland, Oregon ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/large-8x12-custom-catio-designed-%26-built-by-the-catio-company-in-portland%2C-oregon-%F0%9F%90%BE",
+      "shortDescription": "This 8x12 large custom catio was designed and built for a family of seven indoor cats , all different ages, needs, and personalities.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "e0eda316-8a28-4aa9-8cd4-b53e68435877",
+      "name": "A 6'x8'x6' Catio with door on the side and kitty penthouse in Portland, Oregon ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/smal-catio-in-portland-oregon-built-by-the-catio-company",
+      "shortDescription": "See this real A 6'x8'x6' Catio with door on the side and kitty penthouse in Portland, Oregon project, including original photos and custom design details from",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "7dee282b-0223-4865-8053-aeb9fb296147",
+      "name": "Custom Catio in Portland, Oregon, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/custom-catio-in-portland-oregon-designed-and-built-by-the-catio-company",
+      "shortDescription": "(Semayawi and Marco) Features: This custom catio in Portland, Oregon is a very unique and creative design.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "5d527bde-69ed-4aeb-84f3-2943f68cf9c8",
+      "name": "Spacious Custom Catio in Gresham, Oregon, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/spacious-custom-catio-in-gresham-oregon-designed-and-built-by-the-catio-company",
+      "shortDescription": "See this real Spacious Custom Catio in Gresham, Oregon project, including original photos and custom design details from The Catio Company.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "d7a0a496-acee-4faa-97f9-00e8406579ec",
+      "name": "Custom Catio in Port Townsend, Washington, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/custom-catio-in-port-townsend-washington-designed-and-built-by-the-catio-company",
+      "shortDescription": "See this real Custom Catio in Port Townsend, Washington project, including original photos and custom design details from The Catio Company.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "cc3e39d5-d0c2-468e-8fc2-34b3706f6986",
+      "name": "Large Custom Catio in Portland, Oregon, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/large-custom-catio-in-portland-oregon-designed-and-built-by-the-catio-company",
+      "shortDescription": "Features: This custom catio was built in the heart of Portland, Oregon for five beautiful cats who recently moved here from Hawaii.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "1583e4c4-daba-43ff-83e2-06b0de27a1cf",
+      "name": "Unique Second-Story Balcony Catio in Kalama, Washington, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/unique-second-story-balcony-catio-in-kalama-washington-designed-and-built-by-the-catio-company",
+      "shortDescription": "Number of cats: This Custom Catio in Kalama, WA was made for 5 adventurous cats, a mix of Savannahs and Maine Coons.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "320d1187-5a5e-4c85-b2ef-7a893d0b004f",
+      "name": "Unique Custom Catio in Olympia, Washington, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/unique-custom-catio-in-olympia-washington-designed-and-built-by-the-catio-company",
+      "shortDescription": "Number of cats: This custom catio was built in Olympia, WA for 2 very lucky cats.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "36976c07-62fd-4f46-a8f6-2e167746dfc5",
+      "name": "Luxury Custom Catio in Ridgefield, Washington, designed and built by The Catio Company. ",
+      "sourceUrl": "https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company",
+      "shortDescription": "See this real Luxury Custom Catio in Ridgefield, Washington project, including original photos and custom design details from The Catio Company.",
+      "projectType": "Custom Catios",
+      "legacyCollection": "CustomCatios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "9e6efea1-5aa8-47f6-a898-858358a9fca2",
+      "name": "Large 10'x12' Custom Catio in King City, Oregon. Built and Designed by The Catio Company.",
+      "sourceUrl": "https://www.thecatiocompany.com/2026-catios/large-10'x12'-custom-catio-in-king-city%2C-oregon.-built-and-designed-by-the-catio-company.",
+      "shortDescription": "See this real Large 10'x12' Custom Catio in King City, Oregon project, including original photos and custom design details from The Catio Company.",
+      "projectType": "2026 Catios",
+      "legacyCollection": "2026catios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "7ec06daa-b3f4-4bbb-b392-39dd0750f770",
+      "name": "Large Screened-In Catio in Beaverton, Oregon. Designed and Built by The Catio Company",
+      "sourceUrl": "https://www.thecatiocompany.com/2026-catios/large-screened-in-cati-in-beaverton%2C-oregon.-designed-and-built-by-the-catio-company",
+      "shortDescription": "See this real Large Screened-In Catio in Beaverton, Oregon project, including original photos and custom design details from The Catio Company.",
+      "projectType": "2026 Catios",
+      "legacyCollection": "2026catios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    },
+    {
+      "cmsId": "a154e738-154c-4759-8dc3-190c97841823",
+      "name": "8'x10' Blue Custom Catio in Hillsboro, OR. Built and Designed by The Catio Company.",
+      "sourceUrl": "https://www.thecatiocompany.com/2026-catios/8'x10'-blue-custom-catio-in-hillsboro%2C-or.-built-and-designed-by-the-catio-company.",
+      "shortDescription": "See this real 8'x10' Blue Custom Catio in Hillsboro, OR project, including original photos and custom design details from The Catio Company.",
+      "projectType": "2026 Catios",
+      "legacyCollection": "2026catios",
+      "publishStatus": "draft_on_duplicate",
+      "verifiedSource": "Imported from original The Catio Company Wix CMS, original public URL retained",
+      "verified": true
+    }
+  ],
+  "catalogRevision": "draft-catio-project-index-2026-11-15",
+  "cmsProjectPolicy": "Editorial project references from the original Wix CMS imported to a draft site. Link only to original source URLs. Verify them before production launch. Do not treat the draft CMS as a live public API, claim booking availability, or infer missing specifications."
 }
