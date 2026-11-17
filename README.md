@@ -11,7 +11,7 @@ Set these private environment variables in your secure backend host:
 - `OPENAI_MODEL` — optional approved multimodal model ID; confirm current model access before deployment
 - `PORT` — optional, default `8787`
 
-Run `npm start` with Node 20 or later. `GET /health` returns only readiness; `POST /api/chat` accepts `{"message":"...","history":[],"photo":"data:image/jpeg;base64,..."}`. No customer data is persisted in this starter. Raw photos are forwarded only for inference and are not saved by this code. See provider retention practices and publish appropriate customer notice before enabling production uploads.
+Run `npm start` with Node 20 or later. `GET /health` returns only readiness; `POST /api/chat` accepts `{"message":"...","history":[],"photo":"data:image/jpeg;base64,...","photoConsent":true}`. No customer data is persisted in this starter. Raw photos are forwarded only for inference and are not saved by this code. See provider retention practices and publish appropriate customer notice before enabling production uploads.
 
 ## Before production
 
@@ -21,7 +21,7 @@ Run `npm start` with Node 20 or later. `GET /health` returns only readiness; `PO
 4. Connect the website's chat UI to `/api/chat`, with visible error/retry and appropriate user notice. The current published Wix demo is intentionally not connected.
 5. Use Wix APIs through authenticated server calls for CRM submissions and verified digital order recovery; do not send download links until ownership is verified.
 6. Configure Wix Bookings and payment confirmation separately. Do not claim appointments are available until true slots have been checked.
-7. Audit the calculation model and the $150 consultation credit policy before activating customer-facing payments.
+7. Audit the calculation model and the $120 consultation credit policy before activating customer-facing payments.
 8. When enabling a production model, test factual responses, unsafe prompt injection, fee rules, links, and the no-final-quote constraint.
 
 
@@ -32,3 +32,10 @@ Run `npm start` with Node 20 or later. `GET /health` returns only readiness; `PO
 For security, the same `ALLOWED_ORIGIN` and basic rate limit apply. It is read-only; no client address, photos, or chat data are stored. Treat the matcher as a candidate shortlist, not a definitive design recommendation. Wix CMS live synchronization, customer lead storage and appointment/payment integrations remain NOT CONNECTED.
 
 To run tests locally: `npm test`. Do not claim tests have passed until run by a trusted CI runner or developer.
+
+
+### Development chat verification
+
+The assistant uses current knowledge.json for preliminary category-specific prices and collects project details gradually. Lead storage, booking and payment integrations remain disconnected. Photo inference requires photoConsent: true; this backend does not persist photos.
+
+Run npm test for unit/security tests and an HTTP server regression test using a mocked provider without external API calls. Check live model behavior separately in development.
