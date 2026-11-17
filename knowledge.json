@@ -3,10 +3,11 @@
   "primaryArea": "Portland, Oregon and Vancouver, Washington metro areas",
   "outOfAreaPolicy": "Only consider Signature Projects with budgets starting at $35,000; travel and project acceptance require staff approval. Never promise availability.",
   "startingPricesUSD": {
-    "freestanding": 8000,
-    "window": 4000,
+    "freestanding": 6000,
+    "window": 2500,
     "patioConversion": 12000,
-    "signature": 35000
+    "signature": 35000,
+    "custom": 5000
   },
   "freestandingPerSqFtUSD": [
     140,
@@ -75,9 +76,17 @@
       12000,
       18000
     ],
-    "completeCustom": [
+    "freestanding": [
+      6000,
+      12000
+    ],
+    "newRoofAndEnclosure": [
       15000,
       20000
+    ],
+    "window": [
+      2500,
+      5000
     ]
   },
   "intakePolicy": {
@@ -120,5 +129,6 @@
     "source": "The Catio Company 2 CatioProjects CMS (24 draft imports)",
     "liveLookupStatus": "NOT_CONNECTED",
     "description": "Show only verified fields from an authenticated read-only CMS lookup when implemented. Never claim to have live CMS access while disconnected."
-  }
+  },
+  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories."
 }
