@@ -39,3 +39,8 @@ To run tests locally: `npm test`. Do not claim tests have passed until run by a 
 The assistant uses current knowledge.json for preliminary category-specific prices and collects project details gradually. Lead storage, booking and payment integrations remain disconnected. Photo inference requires photoConsent: true; this backend does not persist photos.
 
 Run npm test for unit/security tests and an HTTP server regression test using a mocked provider without external API calls. Check live model behavior separately in development.
+
+
+### Commercial assistant and draft CRM preparation
+
+See [draft integration notes](docs/draft-chat-integration.md) for verified behavior, consent, environment flags, exact draft site restriction and remaining blockers. The development UI is available only with DEV_CHAT_PREVIEW=true at /dev/chat. /api/leads is disabled by default and must not be described as connected until a real consented draft write has been verified. The Wix embed source is a clearly labelled design preview; the private Codespaces live AI opens separately.

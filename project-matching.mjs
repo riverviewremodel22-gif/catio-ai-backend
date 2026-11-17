@@ -3,11 +3,11 @@
 // Do not infer prices, dimensions, material brands, finishes or verified current availability.
 
 const typeSynonyms = {
-  patio: ["patio", "porch", "screened", "conversion", "breezeway"],
-  tunnel: ["tunnel", "cat run", "connected", "catwalk"],
+  patio: ["patio", "porch", "screened", "conversion", "breezeway", "patio techado", "conversion de patio"],
+  tunnel: ["tunnel", "cat run", "connected", "catwalk", "tunel"],
   balcony: ["balcony", "second-story", "second story"],
-  freestanding: ["freestanding", "custom catio", "cedar catio"],
-  window: ["window", "window access", "window catio"]
+  freestanding: ["freestanding", "custom catio", "cedar catio", "independiente", "autoportante"],
+  window: ["window", "window access", "window catio", "ventana"]
 };
 
 const featureSynonyms = {

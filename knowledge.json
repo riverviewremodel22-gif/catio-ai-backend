@@ -130,5 +130,17 @@
     "liveLookupStatus": "NOT_CONNECTED",
     "description": "Show only verified fields from an authenticated read-only CMS lookup when implemented. Never claim to have live CMS access while disconnected."
   },
-  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories."
+  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories.",
+  "commercialFaq": {
+    "maintenance": {
+      "summary": "Inspect joints, fasteners, mesh and screens regularly, especially after severe weather. Repair holes or gaps promptly. Check shelves and climbing features for looseness or sharp edges. Keep nearby vegetation trimmed and remove litter waste. Use cleaning products labelled safe for pets; ask the team about a particular finish or repair.",
+      "sourceUrl": "https://www.thecatiocompany.com/post/catio-maintenance-tips-ensuring-a-safe-and-enjoyable-outdoor-space-for-your-cat",
+      "verified": true
+    },
+    "safetyAndAccessories": {
+      "summary": "Secure mesh, functioning door hardware, appropriate roofing and site-specific foundation/drainage all matter. Roof design must account for local weather and manufacturer instructions. Enrichment options discussed in company guidance include perches, ramps, hammocks, bridges and scratching posts. Layouts should consider age and mobility, with easier routes for kittens or senior cats and a route to the ground. Confirm accessories, feasibility and pricing with the team; do not promise escape-proof or predator-proof performance, engineering approval or code compliance from chat alone.",
+      "sourceUrl": "https://www.thecatiocompany.com/post/cat-safety-over-shortcuts-why-cutting-corners-in-catios-puts-cats-at-risk",
+      "verified": true
+    }
+  }
 }

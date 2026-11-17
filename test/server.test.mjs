@@ -5,11 +5,24 @@ import { once } from 'node:events';
 
 test('HTTP chat starts, enforces origin/consent and sends corrected knowledge to provider', async t => {
   const mock = "globalThis.fetch=async (_url,opts)=>new Response(JSON.stringify({choices:[{message:{content:JSON.parse(opts.body).messages[0].content}}]}),{status:200});";
-  const child=spawn(process.execPath,['--import','data:text/javascript,'+encodeURIComponent(mock),'server.mjs'],{cwd:new URL('..',import.meta.url),env:{...process.env,PORT:'18787',ALLOWED_ORIGIN:'http://localhost:3000',OPENAI_API_KEY:'test-only-placeholder'},stdio:['ignore','pipe','pipe']});
+  const child=spawn(process.execPath,['--import','data:text/javascript,'+encodeURIComponent(mock),'server.mjs'],{cwd:new URL('..',import.meta.url),env:{...process.env,PORT:'18787',DEV_CHAT_PREVIEW:'true',WIX_DRAFT_LEADS_ENABLED:'false',ALLOWED_ORIGIN:'http://localhost:3000',OPENAI_API_KEY:'test-only-placeholder'},stdio:['ignore','pipe','pipe']});
   t.after(()=>child.kill());
   await Promise.race([once(child.stdout,'data'),once(child,'exit').then(()=>{throw Error('Server did not start')}),new Promise((_,reject)=>{const timer=setTimeout(()=>reject(Error('Startup timed out')),5000);timer.unref();})]);
   const base='http://localhost:18787';
   assert.equal((await fetch(base+'/health')).status,200);
+  const capabilities=await (await fetch(base+'/api/capabilities')).json();
+  assert.equal(capabilities.leadsEnabled,false);
+  assert.equal(capabilities.bookingsEnabled,false);
+  assert.equal(capabilities.paymentsEnabled,false);
+  assert.ok(capabilities.consentText.es);
+  const preview=await fetch(base+'/dev/chat');
+  assert.equal(preview.status,200);
+  assert.match(preview.headers.get('content-type'),/text\/html/);
+  const leadRequest=body=>fetch(base+'/api/leads',{method:'POST',headers:{Origin:'http://localhost:3000','Content-Type':'application/json'},body});
+  assert.equal((await leadRequest('{}')).status,503);
+  assert.equal((await leadRequest('{invalid')).status,400);
+  assert.equal((await leadRequest('x'.repeat(16001))).status,413);
+
   const post=(body,origin='http://localhost:3000')=>fetch(base+'/api/chat',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
   assert.equal((await post({message:'hello'},'http://unauthorized.example')).status,403);
   assert.equal((await post(null)).status,400);
