@@ -62,3 +62,23 @@ test('rejects unknown project ID and collection writes for invalid leads',()=>{
   assert.equal(v.ok,false);
   assert.throws(()=>draftWritePlan(v));
 });
+
+test('ignores forged privileges and unexpected nested client data',()=>{
+  const payload={...valid,
+    consentTimestamp:'2020-01-01T00:00:00Z',
+    contactConsent:true,
+    wixSiteId:'production-site',
+    wixCollection:'CatioProjects',
+    marketingSubscribed:true,
+    paymentStatus:'paid',
+    bookingConfirmed:true,
+    privateNotes:{secret:'do not persist'},
+    extraPhotos:[{url:'https://example.com/private.png'}]
+  };
+  const v=validateLeadIntake(payload);
+  assert.equal(v.ok,true);
+  for(const key of ['consentTimestamp','contactConsent','wixSiteId','wixCollection','marketingSubscribed','paymentStatus','bookingConfirmed','privateNotes','extraPhotos']){
+    assert.equal(Object.hasOwn(v.lead,key),false,key);
+  }
+  assert.equal(draftWritePlan(v).destinationCollection,'CatioLeadIntake');
+});
