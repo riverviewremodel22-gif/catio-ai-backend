@@ -9,10 +9,7 @@
     "signature": 35000,
     "custom": 5000
   },
-  "freestandingPerSqFtUSD": [
-    140,
-    155
-  ],
+  "freestandingPerSqFtUSD": [135, 145],
   "consultationUSD": 120,
   "consultationPolicy": "The $120 on-site consultation fee is credited toward the construction project if the customer proceeds, subject to written terms. Booking eligibility is limited to confirmed Portland–Vancouver primary-area addresses.",
   "materials": {
@@ -56,7 +53,7 @@
     }
   },
   "projectIdentificationPolicy": "If asked to identify the finish on a particular The Catio Company project, first match project names, blog articles, Instagram captions and other verified posts. Prefer explicit published product and shade over visual inference. If not certain which project photo is intended, ask for the post link or project name. Cite the source URL where known. No web browsing is available to this backend until a search/retrieval feature is implemented; do not claim to have searched online in real time.",
-  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs. For general questions about which catio mesh The Catio Company uses or recommends, lead with its most-requested standard: 1 × 1-inch openings, 14-gauge black PVC-coated welded wire. Use the existing catalog-approved 1 × 1 affiliate link if asked for a link. When asked about another size or material, do not substitute the 1 × 1 link or guess a product destination.",
+  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, with a short nearby note that purchases through the link may earn The Catio Company a commission. Use a natural product label like “View on Amazon”. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs. For general questions about which catio mesh The Catio Company uses or recommends, lead with its most-requested standard: 1 × 1-inch openings, 14-gauge black PVC-coated welded wire. Use the existing catalog-approved 1 × 1 affiliate link if asked for a link. When asked about another size or material, do not substitute the 1 × 1 link or guess a product destination.",
   "consultationScheduling": {
     "feeUsd": 120,
     "timezone": "America/Los_Angeles",
@@ -130,7 +127,7 @@
     "liveLookupStatus": "NOT_CONNECTED",
     "description": "Show only verified fields from an authenticated read-only CMS lookup when implemented. Never claim to have live CMS access while disconnected."
   },
-  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories.",
+  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. For standard custom freestanding catios with a known footprint, multiply width in feet by depth in feet, then multiply the square footage by $135 and by $145 to give a preliminary project range. The square-foot rate does not apply to window units, tunnels, covered patio conversions, or separate new-roof projects. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories.",
   "commercialFaq": {
     "maintenance": {
       "summary": "Inspect joints, fasteners, mesh and screens regularly, especially after severe weather. Repair holes or gaps promptly. Check shelves and climbing features for looseness or sharp edges. Keep nearby vegetation trimmed and remove litter waste. Use cleaning products labelled safe for pets; ask the team about a particular finish or repair.",
