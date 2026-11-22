@@ -12,10 +12,27 @@ const port = Number(process.env.PORT || 8787);
 const origin = process.env.ALLOWED_ORIGIN || '';
 const previewOrigin = devPreview ? process.env.DEV_CHAT_PUBLIC_ORIGIN || '' : '';
 const previewApiPaths = new Set(['/api/chat', '/api/projects/match']);
+const previewOrigins = new Set(previewOrigin ? [
+  previewOrigin,
+  `https://localhost:${port}`,
+  `http://localhost:${port}`,
+  `https://127.0.0.1:${port}`,
+  `http://127.0.0.1:${port}`
+] : []);
 function allowedRequestOrigin(req) {
   const incoming = req.headers.origin;
   if (origin && incoming === origin) return origin;
-  if (previewOrigin && incoming === previewOrigin && previewApiPaths.has(req.url)) return previewOrigin;
+  if (!previewApiPaths.has(req.url) || !previewOrigins.size) return null;
+  if (previewOrigins.has(incoming)) return incoming;
+  if ((incoming && incoming !== 'null') || req.headers['sec-fetch-site'] !== 'same-origin') return null;
+  try {
+    const referrer = new URL(req.headers.referer);
+    if (referrer.pathname === '/dev/chat' && previewOrigins.has(referrer.origin)) {
+      return referrer.origin;
+    }
+  } catch {
+    // Missing or invalid browser referrer.
+  }
   return null;
 }
 const apiKey = process.env.OPENAI_API_KEY || '';
@@ -37,7 +54,7 @@ http.createServer(async (req,res)=>{
   if (devPreview && req.method==='GET' && ['/dev/chat','/dev/chat.js'].includes(req.url)) {
     const isScript=req.url.endsWith('.js');
     const content=await readFile(new URL(isScript?'./public/chat.js':'./public/chat.html',import.meta.url),'utf8');
-    res.writeHead(200,{'content-type':isScript?'text/javascript; charset=utf-8':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'no-referrer'});
+    res.writeHead(200,{'content-type':isScript?'text/javascript; charset=utf-8':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'same-origin'});
     return res.end(content);
   }
   if (req.url==='/api/capabilities' && req.method==='GET') return json(res,200,{leadsEnabled:leads.enabled,consentText:CONSENT_TEXT,consentVersion:CONSENT_VERSION,bookingsEnabled:false,paymentsEnabled:false});
@@ -57,7 +74,19 @@ http.createServer(async (req,res)=>{
   const isChat=req.url==='/api/chat' && req.method==='POST';
   const isMatch=req.url==='/api/projects/match' && req.method==='POST';
   if (!isChat && !isEligibility && !isMatch && !isLead) return json(res,404,{error:'Not found'});
-  if (!requestOrigin) return json(res,403,{error:'Origin not allowed'});
+  if (!requestOrigin) {
+    if (devPreview && previewApiPaths.has(req.url)) {
+      const suppliedOrigin = req.headers.origin;
+      const originType = !suppliedOrigin ? 'absent' : suppliedOrigin === 'null' ? 'null' : 'unrecognized';
+      console.warn('Private preview request rejected', {
+        endpoint: req.url,
+        originType,
+        sameOrigin: req.headers['sec-fetch-site'] === 'same-origin',
+        referrerPresent: Boolean(req.headers.referer)
+      });
+    }
+    return json(res,403,{error:'Origin not allowed',code:'PREVIEW_ORIGIN_REJECTED'});
+  }
   if (ipLimited(req.socket.remoteAddress||'unknown')) return json(res,429,{error:'Too many requests'});
   if(isLead){
     try {
