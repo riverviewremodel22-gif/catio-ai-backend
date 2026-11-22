@@ -42,3 +42,14 @@ A hidden page named **Catio Assistant Preview** was created in the authorized dr
 The editor displayed a first-save URL selection dialog. It was dismissed to respect the no-domain-change instruction. The page remains available in the open editor preview, but durable Wix save has not been confirmed. The full embed source is retained in this repository as `public/wix-embed-preview.html`. Nothing was published or deployed to a Wix Test Site.
 
 The knowledge file now includes short source-grounded FAQs from company maintenance and safety articles. All owner-corrected prices are preserved.
+
+## Mesh affiliate links pending product identification
+
+The owner supplied these exact mesh links. The product titles and opening sizes still need to be matched to each link. Keep them out of the customer-facing catalog until the mapping is confirmed. The first recommendation for a general mesh question is the established 1 × 1-inch, 14-gauge black PVC-coated welded wire, using its existing catalog-approved link.
+
+1. https://link.amazon/B0bgv88LL
+2. https://link.amazon/B0h7a4Gom
+3. https://link.amazon/B052RBGaw
+4. https://link.amazon/B01R9H46U
+5. https://link.amazon/B08lYEKlE
+6. https://link.amazon/B0fSV7gnx
