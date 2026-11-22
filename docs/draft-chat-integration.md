@@ -45,7 +45,7 @@ The knowledge file now includes short source-grounded FAQs from company maintena
 
 ## Mesh affiliate links pending product identification
 
-The owner supplied these exact mesh links. The product titles and opening sizes still need to be matched to each link. Keep them out of the customer-facing catalog until the mapping is confirmed. The first recommendation for a general mesh question is the established 1 × 1-inch, 14-gauge black PVC-coated welded wire, using its existing catalog-approved link.
+The owner supplied these exact mesh links. The owner identified link 1 as the primary 1 × 1-inch mesh recommendation, and it is now in the catalog. Keep links 2–6 out of customer-facing responses until their products are identified. A general mesh question should lead with the established 1 × 1-inch, 14-gauge black PVC-coated welded wire.
 
 1. https://link.amazon/B0bgv88LL
 2. https://link.amazon/B0h7a4Gom
