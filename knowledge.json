@@ -56,7 +56,7 @@
     }
   },
   "projectIdentificationPolicy": "If asked to identify the finish on a particular The Catio Company project, first match project names, blog articles, Instagram captions and other verified posts. Prefer explicit published product and shade over visual inference. If not certain which project photo is intended, ask for the post link or project name. Cite the source URL where known. No web browsing is available to this backend until a search/retrieval feature is implemented; do not claim to have searched online in real time.",
-  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs.",
+  "affiliatePolicy": "When recommending products, use only exact company-approved affiliate URLs stored in affiliateLinks, labelled as affiliate links where applicable. Never construct Amazon URLs or imply an affiliate link exists until one has been provided and verified. Future admin-editable catalog should map product SKUs to URLs. For general questions about which catio mesh The Catio Company uses or recommends, lead with its most-requested standard: 1 × 1-inch openings, 14-gauge black PVC-coated welded wire. Use the existing catalog-approved 1 × 1 affiliate link if asked for a link. When asked about another size or material, do not substitute the 1 × 1 link or guess a product destination.",
   "consultationScheduling": {
     "feeUsd": 120,
     "timezone": "America/Los_Angeles",
