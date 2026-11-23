@@ -35,6 +35,36 @@
   ],
   "products": [
     {
+      "id": "mesh-14ga-2in",
+      "category": "mesh",
+      "recommendation": "14-gauge 2 × 2-inch black PVC-coated welded wire",
+      "amazonAffiliateUrl": "https://link.amazon/B013CJF63",
+      "brand": null,
+      "verified": false,
+      "linkApprovedByOwner": true,
+      "linkVerificationStatus": "Owner-supplied link for this product; destination not independently verified."
+    },
+    {
+      "id": "gray-pet-screen",
+      "category": "screen",
+      "recommendation": "Metro Screenworks gray pet screen",
+      "amazonAffiliateUrl": "https://link.amazon/B0fisALWF",
+      "brand": "Metro Screenworks",
+      "verified": false,
+      "linkApprovedByOwner": true,
+      "linkVerificationStatus": "Owner-supplied link for this product; destination not independently verified."
+    },
+    {
+      "id": "through-wall-pet-door",
+      "category": "pet-door",
+      "recommendation": "Through-the-wall catio pet door",
+      "amazonAffiliateUrl": "https://link.amazon/A0hvt4hFC",
+      "brand": null,
+      "verified": false,
+      "linkApprovedByOwner": true,
+      "linkVerificationStatus": "Owner-supplied link for this product; destination not independently verified."
+    },
+    {
       "id": "mesh-14ga-1in",
       "category": "mesh",
       "recommendation": "14-gauge 1x1-inch black PVC-coated welded wire",
