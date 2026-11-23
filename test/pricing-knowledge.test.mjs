@@ -12,6 +12,9 @@ test('preliminary prices distinguish general custom catios from new-roof project
   assert.deepEqual(knowledge.typicalRangesUSD.newRoofAndEnclosure, [15000, 20000]);
   assert.deepEqual(knowledge.minimumBuildRangeUSD, [8000, 10000]);
   assert.match(knowledge.pricingGuidance, /not final quotes/i);
+  assert.match(knowledge.simplePorchEnclosurePolicy, /landlord approval/i);
+  assert.match(knowledge.simplePorchEnclosurePolicy, /\$4,000 and \$6,000/i);
+  assert.match(knowledge.simplePorchEnclosurePolicy, /existing roof and floor/i);
   assert.match(knowledge.pricingGuidance, /do not give the new-roof price as the default/i);
 });
 
