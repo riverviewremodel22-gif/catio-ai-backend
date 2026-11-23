@@ -2,6 +2,7 @@
 // A separate paid booking endpoint must independently rerun these checks before taking payment.
 const NORTH_ZIPS = new Set(['98660','98661','98662','98663','98664','98665','98682','98683','98684','98685','98686','98607','98671','98642','98604','97203','97211','97212','97217','97218','97220','97227','97230','97232','97233','97236','97213','97030','97080','97024','97060','97019','97209','97210','97229']);
 const SOUTH_ZIPS = new Set(['97201','97202','97204','97205','97206','97214','97215','97216','97219','97221','97222','97223','97224','97225','97239','97266','97267','97269','97003','97005','97006','97007','97008','97015','97027','97034','97035','97045','97062','97068','97086','97089','97078','97079','97083','97070']);
+export const previewConsultationZips = Object.freeze([...NORTH_ZIPS, ...SOUTH_ZIPS]);
 const countyAllowed = new Set(['53011','41051','41067','41005']);
 const deny = (reason) => ({eligible:false,canBook:false,canPay:false,reason,signatureMinimumUSD:30000});
 export const consultationDates = (region, months=6, date=new Date()) => {
