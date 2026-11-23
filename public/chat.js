@@ -12,19 +12,30 @@ function bubble(role, text) {
  const label = document.createElement('small');
  label.textContent = tr(role === 'user' ? 'you' : 'assistant');
  div.append(label);
- const ridgefieldProjectUrl = 'https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company';
- const parts = role === 'assistant' ? text.split(ridgefieldProjectUrl) : [text];
- parts.forEach((part, index) => {
-  if (index > 0) {
-   const link = document.createElement('a');
-   link.href = ridgefieldProjectUrl;
-   link.target = '_blank';
-   link.rel = 'noopener noreferrer';
-   link.textContent = language === 'es' ? 'Ver el proyecto de Ridgefield' : 'See the Ridgefield catio project';
-   div.append(link);
+ const approvedLinks = {
+  'https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company': {
+   en: 'See the Ridgefield catio project',
+   es: 'Ver el proyecto de Ridgefield'
+  },
+  'https://www.thecatiocompany.com/diy-catio-plans': {
+   en: 'Browse all DIY catio plans',
+   es: 'Ver todos los planos DIY'
   }
-  div.append(document.createTextNode(part));
- });
+ };
+ const parts = role === 'assistant' ? text.split(/(https:\/\/[^\s<>()\[\]]*[a-zA-Z0-9/])/g) : [text];
+ for (const part of parts) {
+  const label = role === 'assistant' && Object.hasOwn(approvedLinks, part) ? approvedLinks[part][language] : null;
+  if (!label) {
+   div.append(document.createTextNode(part));
+   continue;
+  }
+  const link = document.createElement('a');
+  link.href = part;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.textContent = label;
+  div.append(link);
+ }
  $('messages').append(div);
  $('messages').scrollTop = $('messages').scrollHeight;
 }
