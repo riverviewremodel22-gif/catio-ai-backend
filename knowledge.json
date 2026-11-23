@@ -1,12 +1,12 @@
 {
   "business": "The Catio Company",
   "primaryArea": "Portland, Oregon and Vancouver, Washington metro areas",
-  "outOfAreaPolicy": "Only consider Signature Projects with budgets starting at $35,000; travel and project acceptance require staff approval. Never promise availability.",
+  "outOfAreaPolicy": "We serve Olympia, Washington and consider other locations outside the Portland–Vancouver metro for Signature Projects only. These are typically large custom catios or enclosed patios starting at $30,000. Outside our main service area, our crew travels with tools and materials and may stay locally during installation. The project minimum helps cover crew travel, lodging, and transportation. If asked whether we serve Olympia, answer yes for Signature Projects and explain the travel briefly. Invite the customer to share what they have in mind. Each project is subject to team review and availability.",
   "startingPricesUSD": {
     "freestanding": 6000,
     "window": 2500,
     "patioConversion": 12000,
-    "signature": 35000,
+    "signature": 30000,
     "custom": 5000
   },
   "freestandingPerSqFtUSD": [135, 145],
@@ -63,7 +63,7 @@
     "southernDay": "Third Saturday of each month, 9:00 AM–5:00 PM",
     "southernZone": "Southern, southeastern and southwestern Portland metro and nearby approved primary-area locations",
     "eligibility": "Only verified addresses inside approved Portland–Vancouver primary service area may see availability or pay. ZIP matching alone is tentative; verify full address before booking or charging.",
-    "outOfArea": "Reject normal consultation booking/payment. Explain only Signature Projects starting at $35,000 may be considered subject to review. Never promise an out-of-area consultation.",
+    "outOfArea": "Explain that out-of-area work is reserved for Signature Projects, typically large custom catios or enclosed patios starting at $30,000. The minimum helps cover crew travel, lodging, and transportation. Project acceptance and scheduling are reviewed by the team.",
     "bookingStatus": "Inactive in preview: no live payments, calendar booking, or confirmed openings until availability and address verification integrated.",
     "slotDurationMinutes": 60,
     "betweenSessionsMinutes": 60
