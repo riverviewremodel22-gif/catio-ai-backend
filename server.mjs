@@ -1,7 +1,7 @@
 import http from 'node:http';
 import { createLeadService, CONSENT_TEXT, CONSENT_VERSION, SubmissionError } from './lead-submission.mjs';
 import { readFile } from 'node:fs/promises';
-import { evaluateAddress } from './eligibility.mjs';
+import { evaluateAddress, previewConsultationZips } from './eligibility.mjs';
 import { findSimilarProjects } from './project-matching.mjs';
 
 const kb = JSON.parse(await readFile(new URL('./knowledge.json', import.meta.url), 'utf8'));
@@ -87,7 +87,7 @@ http.createServer(async (req,res)=>{
     res.writeHead(200,{'content-type':isScript?'text/javascript; charset=utf-8':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'same-origin'});
     return res.end(content);
   }
-  if (req.url==='/api/capabilities' && req.method==='GET') return json(res,200,{leadsEnabled:leads.enabled,consentText:CONSENT_TEXT,consentVersion:CONSENT_VERSION,bookingsEnabled:false,paymentsEnabled:false});
+  if (req.url==='/api/capabilities' && req.method==='GET') return json(res,200,{leadsEnabled:leads.enabled,consentText:CONSENT_TEXT,consentVersion:CONSENT_VERSION,bookingsEnabled:false,paymentsEnabled:false,...(devPreview ? {previewConsultationZips} : {})});
   if (req.url==='/health' && req.method==='GET') return json(res,200,{ok:true,aiConfigured:Boolean(apiKey)});
   const requestOrigin = allowedRequestOrigin(req);
   if (requestOrigin) res.setHeader('access-control-allow-origin', requestOrigin);
