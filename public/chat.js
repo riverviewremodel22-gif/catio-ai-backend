@@ -6,7 +6,28 @@ const words = {
  es: {chatTab:'Haz una pregunta',leadTab:'Planear mi catio',prices:'Ver precios',materials:'Materiales y seguridad',projects:'Proyectos reales',messageLabel:'Tu pregunta',send:'Enviar',aiNotice:'Las respuestas pueden requerir revisión del equipo. Este chat no reserva, cobra ni envía solicitudes de proyecto.',formTitle:'Cuéntanos sobre tu catio',testLead:"Probar solicitud de proyecto",testMode:"Prueba privada. El formulario revisa tus datos aquí. No se enviará ni guardará una solicitud.",testPassed:"Prueba completa. El formulario pasó la validación. No se envió ni guardó nada.",formIntro:'Comparte algunos detalles para un estimado preliminar. No requiere cita ni pago.',name:'Nombre',city:'Ciudad',type:'Tipo de proyecto',choose:'Elige una opción',freestanding:'Catio independiente',window:'Catio de ventana',patio:'Conversión de patio techado',other:'Otro / ayúdame a elegir',width:'Ancho aproximado (pies)',depth:'Profundidad aproximada (pies)',budget:'Rango de presupuesto',cats:'Número de gatos',notes:'¿Algo más? (opcional)',submitLead:'Enviar solicitud de proyecto',footer:'Vista previa de borrador · Sin reservas ni cobros · Tus datos solo se envían al enviar expresamente una solicitud de proyecto.',welcome:'¡Hola! Soy The Catio Company Assistant. Puedo ayudarte con ideas, materiales y precios preliminares. ¿Qué tienes en mente para tus gatos?',thinking:'Pensando…',previewAccess:"Recarga esta vista privada y comprueba que iniciaste sesión en GitHub. Tu mensaje sigue aquí.",previewOrigin:"El chat privado rechazó la conexión (Catio 403). Tu mensaje sigue aquí.",tryAgainSoon:"El chat recibió demasiadas solicitudes. Espera un minuto y vuelve a intentarlo. Tu mensaje sigue aquí.",chatTimeout:"El chat tardó demasiado en responder. Intenta enviar tu mensaje otra vez.",unavailable:'No pudimos completar la solicitud. Inténtalo de nuevo o escribe a info@thecatiocompany.com.',notConnected:'El envío de solicitudes no está conectado en esta vista previa. Tus datos no se enviarán ni guardarán. Escribe a info@thecatiocompany.com.',connected:'Con tu consentimiento, tus datos de contacto y del proyecto se enviarán de forma privada a The Catio Company.',saved:'¡Gracias! El servidor confirmó tu solicitud de proyecto. Referencia: ',notSaved:'Tu solicitud de proyecto no fue confirmada. Escribe a info@thecatiocompany.com.',partial:'No pudimos confirmar la solicitud completa. Es posible que algunos datos de contacto se hayan guardado. Escribe a info@thecatiocompany.com antes de volver a intentarlo.',noProjects:'Dime un tipo de proyecto o una característica para buscar ejemplos documentados.',you:'Tú',assistant:'The Catio Company Assistant'}
 };
 function tr(key) { return words[language][key] || key; }
-function bubble(role, text) { const div=document.createElement('div'); div.className='bubble '+role; const label=document.createElement('small'); label.textContent=tr(role==='user'?'you':'assistant'); div.append(label,document.createTextNode(text)); $('messages').append(div); $('messages').scrollTop=$('messages').scrollHeight; }
+function bubble(role, text) {
+ const div = document.createElement('div');
+ div.className = 'bubble ' + role;
+ const label = document.createElement('small');
+ label.textContent = tr(role === 'user' ? 'you' : 'assistant');
+ div.append(label);
+ const galleryUrl = 'https://www.thecatiocompany.com/large-catios';
+ const parts = role === 'assistant' ? text.split(galleryUrl) : [text];
+ parts.forEach((part, index) => {
+  if (index > 0) {
+   const link = document.createElement('a');
+   link.href = galleryUrl;
+   link.target = '_blank';
+   link.rel = 'noopener noreferrer';
+   link.textContent = language === 'es' ? 'Ver galería de catios grandes' : 'Browse the Large Catios gallery';
+   div.append(link);
+  }
+  div.append(document.createTextNode(part));
+ });
+ $('messages').append(div);
+ $('messages').scrollTop = $('messages').scrollHeight;
+}
 function status(id,text,error=false) { $(id).textContent=text; $(id).className='status'+(error?' error':''); }
 function applyLanguage() {
  document.documentElement.lang = language;
