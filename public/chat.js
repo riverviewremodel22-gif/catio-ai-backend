@@ -12,15 +12,15 @@ function bubble(role, text) {
  const label = document.createElement('small');
  label.textContent = tr(role === 'user' ? 'you' : 'assistant');
  div.append(label);
- const galleryUrl = 'https://www.thecatiocompany.com/large-catios';
- const parts = role === 'assistant' ? text.split(galleryUrl) : [text];
+ const ridgefieldProjectUrl = 'https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company';
+ const parts = role === 'assistant' ? text.split(ridgefieldProjectUrl) : [text];
  parts.forEach((part, index) => {
   if (index > 0) {
    const link = document.createElement('a');
-   link.href = galleryUrl;
+   link.href = ridgefieldProjectUrl;
    link.target = '_blank';
    link.rel = 'noopener noreferrer';
-   link.textContent = language === 'es' ? 'Ver galería de catios grandes' : 'Browse the Large Catios gallery';
+   link.textContent = language === 'es' ? 'Ver el proyecto de Ridgefield' : 'See the Ridgefield catio project';
    div.append(link);
   }
   div.append(document.createTextNode(part));
