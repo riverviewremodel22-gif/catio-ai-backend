@@ -13,6 +13,10 @@ function bubble(role, text) {
  label.textContent = tr(role === 'user' ? 'you' : 'assistant');
  div.append(label);
  const approvedLinks = {
+  "https://link.amazon/B013CJF63": {"en":"View on Amazon (paid link)","es":"Ver en Amazon (enlace pagado)"},
+  "https://link.amazon/B0fisALWF": {"en":"View on Amazon (paid link)","es":"Ver en Amazon (enlace pagado)"},
+  "https://link.amazon/A0hvt4hFC": {"en":"View on Amazon (paid link)","es":"Ver en Amazon (enlace pagado)"},
+  "https://link.amazon/B0bgv88LL": {"en":"View on Amazon (paid link)","es":"Ver en Amazon (enlace pagado)"},
   'https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company': {
    en: 'See the Ridgefield catio project',
    es: 'Ver el proyecto de Ridgefield'
