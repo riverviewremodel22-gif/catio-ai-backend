@@ -3,13 +3,14 @@
   "primaryArea": "Portland, Oregon and Vancouver, Washington metro areas",
   "outOfAreaPolicy": "We serve Olympia, Washington and consider other locations outside the Portland–Vancouver metro for Signature Projects only. These are substantial builds with a large footprint, usually a spacious custom catio or an enclosed patio with room for people and cats. They start at $30,000. Offer the Luxury Custom Catio in Ridgefield, Washington as a single example of the scale and layout: https://www.thecatiocompany.com/custom-catios-1/luxury-custom-catio-in-ridgefield-washington-designed-and-built-by-the-catio-company. Present it as design inspiration without claiming its price or that it was sold under today's Signature Project policy. Outside our main service area, our crew travels with tools and materials and may stay locally during installation. The project minimum helps cover crew travel, lodging, and transportation. If asked whether we serve Olympia, answer yes for Signature Projects and explain the travel briefly. Invite the customer to share what they have in mind. Each project is subject to team review and availability. For a smaller project, warmly offer the DIY catio plans. Customers can share them with a local carpenter or contractor to build a catio in a similar style that fits their space. Link to All DIY Catio Plans at https://www.thecatiocompany.com/diy-catio-plans.",
   "startingPricesUSD": {
-    "freestanding": 6000,
-    "window": 2500,
+    "freestanding": 8000,
+    "window": 8000,
     "patioConversion": 12000,
     "signature": 30000,
-    "custom": 5000
+    "custom": 8000
   },
   "freestandingPerSqFtUSD": [135, 145],
+  "minimumBuildRangeUSD": [8000, 10000],
   "consultationUSD": 120,
   "consultationPolicy": "The $120 on-site consultation fee is credited toward the construction project if the customer proceeds, subject to written terms. Booking eligibility is limited to confirmed Portland–Vancouver primary-area addresses.",
   "materials": {
@@ -74,7 +75,7 @@
       18000
     ],
     "freestanding": [
-      6000,
+      8000,
       12000
     ],
     "newRoofAndEnclosure": [
@@ -82,8 +83,8 @@
       20000
     ],
     "window": [
-      2500,
-      5000
+      8000,
+      10000
     ]
   },
   "intakePolicy": {
@@ -127,7 +128,7 @@
     "liveLookupStatus": "NOT_CONNECTED",
     "description": "Show only verified fields from an authenticated read-only CMS lookup when implemented. Never claim to have live CMS access while disconnected."
   },
-  "pricingGuidance": "Custom catios start at approximately $5,000; window catios start at approximately $2,500. Typical freestanding catios range $6,000–$12,000, covered patio conversions $12,000–$18,000, and projects requiring a new roof and enclosure $15,000–$20,000. For standard custom freestanding catios with a known footprint, multiply width in feet by depth in feet, then multiply the square footage by $135 and by $145 to give a preliminary project range. The square-foot rate does not apply to window units, tunnels, covered patio conversions, or separate new-roof projects. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Ask for approximate width, depth, project type, location/ZIP, photos of the proposed site if available, and budget before narrowing an estimate. Prices vary with size, ground preparation, roof, finish, access and accessories.",
+  "pricingGuidance": "All catios built by The Catio Company start at $8,000. Standard freestanding builds typically range from $8,000 to $12,000, covered patio conversions from $12,000 to $18,000, and projects requiring a new roof and enclosure from $15,000 to $20,000. For standard freestanding catios with a known footprint, multiply width in feet by depth in feet, then multiply that square footage by $135 and $145. If the low end of that calculation falls below $8,000, say “This project typically falls between $8,000 and $10,000” and omit the raw amount and calculation. Do not give a starting price or estimate below $8,000 for a company-built catio, even for a small or window catio. DIY plan prices are separate. These are preliminary ranges, not final quotes. Do not give the new-roof price as the default for all custom catios. Final pricing varies with the site, site preparation, roof, finish, access and accessories.",
   "commercialFaq": {
     "maintenance": {
       "summary": "Inspect joints, fasteners, mesh and screens regularly, especially after severe weather. Repair holes or gaps promptly. Check shelves and climbing features for looseness or sharp edges. Keep nearby vegetation trimmed and remove litter waste. Use cleaning products labelled safe for pets; ask the team about a particular finish or repair.",
