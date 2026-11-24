@@ -9,8 +9,14 @@
     "signature": 30000,
     "custom": 8000
   },
-  "freestandingPerSqFtUSD": [135, 145],
-  "minimumBuildRangeUSD": [8000, 10000],
+  "freestandingPerSqFtUSD": [
+    135,
+    145
+  ],
+  "minimumBuildRangeUSD": [
+    8000,
+    10000
+  ],
   "consultationUSD": 120,
   "consultationPolicy": "The $120 on-site consultation fee is credited toward the construction project if the customer proceeds, subject to written terms. Booking eligibility is limited to confirmed Portland–Vancouver primary-area addresses.",
   "materials": {
@@ -92,19 +98,18 @@
       "projectType",
       "widthFeet",
       "depthFeet",
-      "city",
-      "zipCode",
-      "budgetRange"
+      "zipCode"
     ],
     "requestIfRelevant": [
+      "city",
       "heightFeet",
-      "fullStreetAddress",
       "hoaApproval",
-      "petAccess",
       "numberOfCats",
+      "petAccess",
       "catMobilityNeeds",
       "roofPreference",
-      "finishPreference"
+      "finishPreference",
+      "notes"
     ],
     "optionalPhotoUploads": [
       "proposedSite",
@@ -115,7 +120,13 @@
     "photoConsentRequired": true,
     "photoPrivacy": "Private customer records only, not the public CatioProjects collection.",
     "projectReference": "Preserve a stable CMS project ID when the visitor requests a similar catio.",
-    "onlyClaimStoredAfterConfirmedWrite": true
+    "onlyClaimStoredAfterConfirmedWrite": true,
+    "requiredForLeadSubmission": [
+      "name",
+      "email",
+      "zipCode"
+    ],
+    "budgetQuestionPolicy": "Do not ask visitors for a budget or include a budget field in the estimate intake."
   },
   "orderSupportPolicy": {
     "purchaseVerificationRequired": true,
