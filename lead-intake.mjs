@@ -28,7 +28,6 @@ export function validateLeadIntake(payload) {
   const widthFeet = clampNumeric(payload.widthFeet,200);
   const depthFeet = clampNumeric(payload.depthFeet,200);
   const zipCode = trim(payload.zipCode,10);
-  const budgetRange = trim(payload.budgetRange,80);
   const referenceProjectId = trim(payload.referenceProjectId,100);
   const photoConsent = payload.photoConsent === true;
 
@@ -37,7 +36,6 @@ export function validateLeadIntake(payload) {
   if (!permittedProjectTypes.has(projectType)) errors.push('Choose a supported project type');
   if (widthFeet === null || depthFeet === null) errors.push('Width and depth must be positive numbers (feet)');
   if (!/^\d{5}$/.test(zipCode)) errors.push('A valid 5-digit ZIP code is required');
-  if (!budgetRange) errors.push('Budget range is required');
   if (payload.photoReferenceIds && !photoConsent) errors.push('Photo consent required before attaching private photo references');
   if (payload.photoReferenceIds && (!Array.isArray(payload.photoReferenceIds) || payload.photoReferenceIds.length > 10 ||
     !payload.photoReferenceIds.every(x => typeof x === 'string' && /^[a-zA-Z0-9:_-]{8,180}$/.test(x)))) {
@@ -58,7 +56,6 @@ export function validateLeadIntake(payload) {
     city: trim(payload.city,100),
     state: trim(payload.state,2).toUpperCase(),
     zipCode,
-    budgetRange,
     existingStructure: trim(payload.existingStructure,400),
     accessMethod: trim(payload.accessMethod,200),
     hoaApproval: trim(payload.hoaApproval,100),
